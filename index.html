@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Karozza</title>
+    <link
+      rel="shortcut icon"
+      href="./src/images/logo1.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/css/main_styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="under-menu">
+        <div id="city">
+          <select name="" id="">
+            <option>Минск</option>
+            <option>Гомель</option>
+            <option>Могилёв</option>
+            <option>Витебск</option>
+            <option>Гродно</option>
+            <option>Брест</option>
+          </select>
+        </div>
+        <div class="info">
+          Информация<img class="info-down" src="./src/images/city-down.png" />
+        </div>
+        <div id="help" class="help">
+          <p id="payment">Оплата</p>
+          <p id="delivery">Доставка</p>
+          <p id="selfCaring">Самовывоз</p>
+          <p id="help">Помощь</p>
+        </div>
+        <div id="tel" class="tel-number">
+          <div class="num__change">
+            <img src="src/images/MTS.png" class="tel-icon" />
+            <p>+375 44 123 675 89</p>
+          </div>
+          <img class="num__icon-phone" src="src/images/phone.png" />
+          <img class="num-down" src="src/images/city-down.png" />
+        </div>
+      </div>
+      <div id="num-drop" class="num-drop">
+        <div>
+          <img src="src/images/MTS.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
+        </div>
+        <div>
+          <img src="src/images/life.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
+        </div>
+        <div>
+          <img src="src/images/velcom.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="logo">
+          <img class="logo__img" src="src/images/logo.svg" />
+          <img class="logo__text" src="./src/images/Name.svg" />
+        </div>
+        <div id="catalog">
+          <p>Каталог</p>
+          <img src="src/images/catalog.png" />
+        </div>
+        <div class="search">
+          <a href="./choise.html">
+            <img id="search" src="src/images/search.png" />
+          </a>
+          <input
+            id="input-search"
+            type="text"
+            placeholder="Введите название техники"
+          />
+        </div>
+        <div class="buttons">
+          <div id="chosen" class="menu-buttons">
+            <img src="src/images/chosen.png" />
+            <p>Избранное</p>
+          </div>
+          <div id="compare" class="menu-buttons">
+            <img src="src/images/comparison.png" />
+            <p>Сравнение</p>
+          </div>
+          <div id="buy">
+            <div class="busket-icon">
+              <div>
+                <img src="src/images/bag.png" />
+                <p>Корзина</p>
+              </div>
+              <p id="amount">0</p>
+            </div>
+            <div class="menu__price">
+              <p id="rub">0</p>
+              <p class="t">.</p>
+              <p id="kop">00</p>
+              <p class="rub">руб</p>
+              <img class="basket" src="src/images/city-down.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="katalog-drop" class="katalog-drop">
+        <a class="katalog-search" href="./choise.html">
+          <div href="./choise.html">
+            <img src="src/images/fridge-icon.png" />
+            <p>Холодильники</p>
+          </div>
+        </a>
+        <a class="katalog-search" href="./choise.html">
+          <div>
+            <img src="src/images/microwave-icon.png" alt="" />
+            <p>Микроволновки</p>
+          </div>
+        </a>
+        <a class="katalog-search" href="./choise.html">
+          <div>
+            <img src="src/images/vaccum-icon.png" alt="" />
+            <p>Пылесосы</p>
+          </div>
+        </a>
+        <a class="katalog-search" href="./choise.html">
+          <div>
+            <img src="src/images/mult-icon.png" alt="" />
+            <p>Мультиварки</p>
+          </div>
+        </a>
+        <a class="katalog-search" href="./choise.html">
+          <div>
+            <img src="src/images/tv-icon.png" alt="" />
+            <p>Телевизоры</p>
+          </div>
+        </a>
+      </div>
+      <div id="header-drop" class="header-drop">
+        <div class="header">
+          <div>
+            <p>Товары:</p>
+            <p id="kol">0</p>
+          </div>
+          <button id="end" class="end">
+            <p>Купить</p>
+            <img src="src/images/buy-button.png" />
+          </button>
+          <img
+            id="header-cross"
+            class="cross"
+            src="src/images/cross.png"
+            alt=""
+          />
+        </div>
+        <div id="basket-goods">
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button>В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button>В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button>В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button>В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="low-info" class="low-info">
+        <p id="pay-bottom">Оплата</p>
+        <p id="delivery-bottom">Доставка</p>
+        <p id="selfCaring-bottom">Самовывоз</p>
+        <p id="help-bottom">Помощь</p>
+      </div>
+      <div class="menu__bottom">
+        <p id="bottom-info" class="menu__bottom-info">Информация</p>
+        <p class="bottom-button" id="compare-bottom">Сравнение</p>
+        <p class="bottom-button" id="chosen-bottom">Избранное</p>
+        <p id="buy-bottom">Корзина</p>
+      </div>
+      <div class="pop-up">
+        <div class="payment pay">
+          <p>
+            Оплату можно провести в точке выдачи или при доставке товара.<br />Мы
+            принимаем как наличные, так и следующие банковские карты:
+          </p>
+          <img src="src/images/PaymentIcons.png" alt="" />
+          <p>Мы предлагаем рассрочку в 0% от 45 белорусских рублей в месяц!</p>
+        </div>
+        <div class="delivery del">
+          <p>
+            Мы доставляем наши заказы настолько быстро, насколько это возможно.
+          </p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Мы работаем без выходных</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Мы без проблем доставим заказы в крупнейших городах Беларуси</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>
+            Мы можем отправить заказ по почте, подробности уточните у оператора
+          </p>
+        </div>
+        <div class="selfCaring self">
+          <p>Мы имеем пункты выдачи в крупнейших городах Беларуси:</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Минск: Проспект Независимости, 12</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Гомель: ул. Барыкина, 5</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Могилёв: Ленинская ул., 74</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Витебск: Московский проспект, 42</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Гродно: ул. Ольги Соломоновой, 96</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Брест: бульв. Космонавтов, 69</p>
+        </div>
+        <div class="help">
+          <p>Нужна помощь?</p>
+          <p>
+            Наши операторы с радостью ответят на любой интересующий вас вопрос
+          </p>
+          <input type="text" placeholder="Укажите ваш номер телефона" />
+          <p>Мы постараемся позвонить как можно быстрее!</p>
+          <button class="end-btn">Отправить</button>
+        </div>
+        <div id="end-show" class="buy">
+          <p>Прекрасный выбор!</p>
+          <p>
+            Пожалуйста, укажите свой номер телефона, наш оператор скоро свяжется
+            с вами
+          </p>
+          <input type="text" placeholder="Укажите ваш номер телефона" />
+          <p>Мы работаем без выходных!</p>
+          <button class="end-btn">Отправить</button>
+        </div>
+      </div>
+    </header>
+    <main class="main-body">
+      <section class="slogan">
+        <div>
+          <p><span class="green-text">Сделать</span> ваш комфорт</p>
+          <p>Наше<span class="green-text"> счастье</span></p>
+          <p class="little">
+            У нас вы найдёте только лучшие товары по лучшим ценам
+          </p>
+          <a href="#href"
+            ><button>
+              <p>За покупками</p>
+              <img src="src/images/right.png" /></button
+          ></a>
+        </div>
+        <img class="main-image" src="src/images/main-image.png" />
+      </section>
+      <section class="pop-categories">
+        <h1>Популярные категории</h1>
+        <div class="pop-items">
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/fridge-front.png" />
+              <p>Холодильники</p>
+            </div>
+          </a>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/tv.png" />
+              <p>Телевизоры</p>
+            </div>
+          </a>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/vaccum.png" />
+              <p>Пылесосы</p>
+            </div>
+          </a>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/multi.png" />
+              <p>Мультиварки</p>
+            </div>
+          </a>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/microwave.png" />
+              <p>Микроволновки</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="hits">
+        <div id="href"></div>
+        <div class="string-hits">
+          <h1>Хиты продаж</h1>
+          <img src="src/images/fire.png" />
+        </div>
+        <div id="all-hits" class="all-hits">
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="good__string-new"></div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="novelties">
+        <h1 class="stringNovel">Новинки</h1>
+        <div class="offers">
+          <img class="first-offer" src="src/images/sale.jpg" />
+          <img src="src/images/best.jpg" class="best" />
+        </div>
+        <div class="nov">
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="good__string-new"></div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-good">
+            <div class="sale">-20%</div>
+            <img class="main-good-img" src="src/images/vac-cl.png" />
+            <div class="good-info">
+              <div class="mark">
+                <img src="src/images/star.png" />
+                <p class="good-mark"></p>
+              </div>
+              <p class="good-code"></p>
+            </div>
+            <p class="name"></p>
+            <div class="price">
+              <div class="main-price">
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
+              </div>
+              <div class="before-price">
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
+              </div>
+              <p class="minus-price"></p>
+            </div>
+            <div class="good-buttons">
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="other">
+        <div class="other__news">
+          <p class="other__news-title">Новости</p>
+          <img src="src/images/newsItem.svg" alt="" class="other__news-item" />
+        </div>
+        <div class="other__look">
+          <p class="other__look-title">Обзоры</p>
+          <img
+            src="src/images/reviewItem.svg"
+            alt=""
+            class="other__look-item"
+          />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container-first">
+        <p class="foot-text">
+          © 20022-2023 Торговая сеть «Karozza», интернет-магазин karozza.by,
+          karozza ООО «ЭЛЕКТРОСЕРВИС и Ко». Регистрация в Торговом реестре
+          Республики Беларусь №210825 04.03.2015 г., УНН 100373457
+        </p>
+        <p class="foot-text">
+          Дата включения сведений об интернет-магазине 5element.by в Торговый
+          реестр Республики Беларусь - 11.04.2018.
+        </p>
+        <p class="foot-text">
+          Номера городских телефонов уполномоченных по защите прав
+          потребителей:<br />
+          +37517-368-80-69 – администрация Московского района г. Минска;<br />
+          +37517-218-00-82 – главное управление торговли и услуг
+          Мингорисполкома.
+        </p>
+        <p class="foot-text">
+          Режим работы интернет-магазина: с 9.00 до 21.00 ежедневно. Заказы,
+          которые оформлены в нерабочее время, принимаются в работу утром
+          следующего за оформлением дня.
+        </p>
+      </div>
+      <div>
+        <p>Принимаем к оплате</p>
+        <img src="src/images/PaymentIcons.svg" />
+        <p>
+          Служба по работе с покупателями ЗАО «ПАТИО» (по вопросам рассмотрения
+          обращения покупателей о нарушении их прав): Тел.: +37517-359-23-83.
+          Электронная почта: 275@Karozza.by. Режим работы службы: с 9.00 до
+          21.00 ежедневно.
+        </p>
+      </div>
+      <div class="footer__low-width">
+        <p>Принимаем к оплате</p>
+        <img src="src/images/PaymentIcons.svg" />
+        <p>
+          Служба по работе с покупателями ЗАО «ПАТИО»<br />
+          (по вопросам рассмотрения обращения покупателей о нарушении их
+          прав):<br />
+          Тел.: +37517-359-23-83.<br />
+          Электронная почта: 275@Karozza.by<br />
+          Режим работы службы: с 9.00 до 21.00 ежедневно.
+        </p>
+        <p class="foot-text">
+          © 20022-2023 Торговая сеть «Karozza», интернет-магазин karozza.by,
+          karozza ООО «ЭЛЕКТРОСЕРВИС и Ко».<br />
+          Регистрация в Торговом реестре Республики Беларусь №210825 04.03.2015
+          г., УНН 100373457
+        </p>
+        <p class="foot-text">
+          Дата включения сведений об интернет-магазине 5element.by в Торговый
+          реестр Республики Беларусь - 11.04.2018.
+        </p>
+        <p class="foot-text">
+          Номера городских телефонов уполномоченных по защите прав
+          потребителей:<br />
+          +37517-368-80-69 – администрация Московского района г. Минска;<br />
+          +37517-218-00-82 – главное управление торговли и услуг
+          Мингорисполкома.
+        </p>
+        <p class="foot-text">
+          Режим работы интернет-магазина: с 9.00 до 21.00 ежедневно.<br />
+          Заказы, которые оформлены в нерабочее время, принимаются в работу
+          утром следующего за оформлением дня.
+        </p>
+      </div>
+    </footer>
+    <script src="src/script/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,691 @@
+$maxWidth: 1980;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 300;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 300px) / #{$maxWidth})
+  );
+}
+body {
+  user-select: none;
+  a,
+  a:visited,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+}
+main {
+  padding-top: 102px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 30px;
+  .nav {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    a {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.01em;
+      color: rgba(100, 94, 94, 1);
+      &:hover {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        cursor: pointer;
+      }
+    }
+    img {
+      margin: 0 4px 2px 4px;
+      width: 6px;
+    }
+  }
+  .bold {
+    font-weight: bold;
+    &:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
+      cursor: default;
+    }
+  }
+  .like-little {
+    display: none;
+    margin-top: 5px;
+    img {
+      width: 20px;
+      margin-right: 5px;
+      margin-left: 10px;
+    }
+  }
+  h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    margin-bottom: 30px;
+  }
+  .choose {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .short-line {
+      display: none;
+    }
+    .line {
+      min-width: 126px;
+    }
+    .sel {
+      width: 200px;
+      h4 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 29px;
+        letter-spacing: -0.02em;
+      }
+      .line {
+        width: 100%;
+        margin: 5px 0 5px 0;
+      }
+      .in-stock {
+        display: flex;
+        align-items: center;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        .custom-checkbox {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+        }
+        .custom-checkbox + label {
+          display: inline-flex;
+          align-items: center;
+          user-select: none;
+          cursor: pointer;
+        }
+        .custom-checkbox + label::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+          flex-grow: 0;
+          border: 1px solid rgba(35, 177, 50, 1);
+          border-radius: 0.25em;
+          margin-right: 0.5em;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 50% 50%;
+        }
+        .custom-checkbox:checked + label::before {
+          background-color: rgba(35, 177, 50, 1);
+          background-image: url("../images/Cheked.png");
+          background-size: 14px;
+        }
+      }
+      .price {
+        p {
+          display: flex;
+          align-items: center;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.02em;
+          margin-bottom: 5px;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          input[type="text"] {
+            width: 95px;
+            height: 30px;
+            padding: 5px;
+            border: 3px solid #e7e6e6;
+            border-radius: 8px;
+            font-family: "Lato";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+          }
+          input[type="text"]::placeholder {
+            font-size: 18px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    &__goods {
+      margin-left: 5%;
+      margin-right: 5%;
+      &-good {
+        margin-bottom: 12px;
+        background-color: #fff;
+        border: 3px solid rgba(231, 230, 230, 1);
+        border-radius: 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        &:hover {
+          cursor: pointer;
+        }
+        &-image {
+          width: 180px;
+          margin-right: 20px;
+        }
+        .buy {
+          margin-left: 10vw;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          height: 256px;
+          .text {
+            font-family: "Montserrat";
+            font-style: normal;
+            line-height: 17px;
+            letter-spacing: 0.01em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .info {
+              font-size: 12px;
+            }
+            .code {
+              text-align: right;
+              font-size: 12px;
+              font-weight: 500;
+              margin-bottom: 15px;
+            }
+            .line {
+              width: 200px;
+              margin-top: 25px;
+              margin-bottom: 10px;
+            }
+            .price {
+              display: flex;
+              align-items: flex-end;
+              justify-content: flex-end;
+              div {
+                display: flex;
+              }
+              .before-price {
+                text-decoration-line: line-through;
+                font-weight: 400;
+                font-size: 16px;
+                color: #8f8f8f;
+                margin-bottom: -6px;
+              }
+              .minus-price {
+                color: rgba(35, 177, 50, 1);
+                margin-right: 10px;
+                font-weight: 700;
+                margin-left: 8px;
+                margin-bottom: -6px;
+                margin-right: 22px;
+              }
+              .literal-rub {
+                font-weight: 700;
+                font-size: 30px;
+              }
+
+              .literal-kop {
+                font-weight: 700;
+                font-size: 22px;
+                margin-bottom: -2px;
+              }
+            }
+          }
+          .buttons {
+            .like {
+              display: flex;
+              justify-content: flex-end;
+              img {
+                width: 25px;
+                margin-right: 5px;
+                margin-left: 10px;
+                &:hover {
+                  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                  cursor: pointer;
+                }
+              }
+            }
+            .get {
+              margin-top: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              button {
+                background-color: rgba(35, 177, 50, 1);
+                border-radius: 10px;
+                color: white;
+                width: 150px;
+                height: 34px;
+                text-align: center;
+                line-height: 34px;
+                &:hover {
+                  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                  cursor: pointer;
+                }
+              }
+              img {
+                margin-left: 10px;
+                width: 34px;
+                &:hover {
+                  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+        .char {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          height: 250px;
+          width: 260px;
+          .sale {
+            display: block;
+            background-color: rgba(35, 177, 50, 1);
+            border-radius: 5px;
+            color: white;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            text-align: center;
+            height: 18px;
+            width: 34px;
+          }
+          .name {
+            font-family: "Encode Sans Expanded";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 21px;
+            letter-spacing: 0.01em;
+          }
+          .aval {
+            font-family: "Encode Sans Expanded";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: rgba(35, 177, 50, 1);
+          }
+          .row {
+            display: flex;
+            align-items: center;
+            font-family: "Roboto";
+            font-style: normal;
+            letter-spacing: 0.01em;
+            font-size: 14px;
+            font-weight: 400;
+            span {
+              font-weight: 700;
+            }
+          }
+          .star {
+            width: 12px;
+            margin-right: 2px;
+          }
+          .mark {
+            color: rgba(255, 193, 7, 1);
+            font-family: "Encode Sans Expanded";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .choose {
+      .sel {
+        width: 150px;
+        .line {
+          width: 160px;
+        }
+        .price {
+          div {
+            input[type="text"] {
+              width: 40%;
+            }
+          }
+        }
+      }
+      &__goods {
+        margin-left: 0;
+        margin-right: 0;
+        &-good {
+          .char {
+            width: auto;
+            height: auto;
+            display: block;
+            min-width: 198px;
+            .name {
+              @include adaptiv-font(16, 10);
+            }
+            * {
+              height: auto;
+            }
+            .row {
+              @include adaptiv-font(18, 8);
+            }
+          }
+          .buy {
+            width: calc(10vw + 80px);
+            height: 210px;
+            margin-left: 5px;
+            .text {
+              .info {
+                text-align: right;
+              }
+              .info,
+              .code {
+                @include adaptiv-font(14, 8);
+              }
+              .price {
+                .literal-rub {
+                  @include adaptiv-font(43, 16);
+                }
+                .literal-kop {
+                  @include adaptiv-font(30, 10);
+                }
+                .before-price,
+                .minus-price {
+                  @include adaptiv-font(22, 8);
+                }
+                .minus-price {
+                  margin-right: 1vw;
+                  margin-left: 0.5vw;
+                }
+              }
+              .line {
+                width: 90%;
+              }
+            }
+            .buttons {
+              .get {
+                margin-top: 10px;
+                button {
+                  width: 12vw;
+                }
+              }
+            }
+          }
+          &-image {
+            width: 180px;
+            margin-right: 10px;
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .choose__goods-good .buy {
+      height: 190px;
+    }
+    .choose__goods-good-image {
+      width: 120px;
+      height: 120px;
+    }
+    .choose .sel .line {
+      width: 126px;
+    }
+    .choose .sel {
+      width: 126px;
+    }
+  }
+  @media (max-width: 700px) {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 5px;
+    h1 {
+      @include adaptiv-font(40, 20);
+      margin-bottom: 5px;
+    }
+    .nav {
+      padding-bottom: 0;
+      a {
+        @include adaptiv-font(18, 10);
+      }
+    }
+    .choose__goods-good {
+      padding: 5px;
+    }
+    .choose__goods-good .char {
+      min-width: auto;
+    }
+    .choose__goods-good .buy {
+      width: calc(10vw + 60px);
+    }
+    .choose__goods-good-image {
+      width: 100px;
+      height: 100px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  @media (max-width: 600px) {
+    .choose {
+      flex-direction: column;
+      .sel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+        img {
+          display: none;
+        }
+        .price div input[type="text"] {
+          width: 50%;
+        }
+        .in-stock {
+          @include adaptiv-font(40, 12);
+        }
+        h4 {
+          @include adaptiv-font(40, 15);
+        }
+        .price p {
+          @include adaptiv-font(40, 12);
+        }
+        .short-line {
+          display: block;
+          transform: rotate(90deg);
+          width: 60px;
+          margin-left: -20px;
+          margin-right: -20px;
+        }
+        label {
+          min-width: 102px;
+        }
+      }
+      &__goods-good {
+        .line {
+          display: none;
+        }
+        .short-line {
+          display: block;
+          margin-top: 15px;
+          margin-bottom: 8px;
+          width: 25vw;
+        }
+        .char {
+          .name {
+            @include adaptiv-font(30, 10);
+          }
+          .row {
+            @include adaptiv-font(30, 8);
+          }
+        }
+        .buy {
+          height: 179px;
+        }
+        .buy .buttons {
+          .like {
+            img {
+              width: 20px;
+            }
+          }
+          .get button {
+            width: 16vw;
+            height: 25px;
+            @include adaptiv-font(25, 8);
+            line-height: 25px;
+          }
+          .get img {
+            width: 25px;
+          }
+        }
+        .buy .text {
+          .info,
+          .code {
+            @include adaptiv-font(25, 8);
+          }
+          .price {
+            .literal-rub {
+              @include adaptiv-font(50, 16);
+            }
+            .literal-kop {
+              @include adaptiv-font(35, 10);
+            }
+            .before-price,
+            .minus-price {
+              @include adaptiv-font(28, 8);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .choose__goods {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .choose__goods-good {
+      width: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 280px;
+      .char {
+        .name {
+          @include adaptiv-font(27, 14);
+        }
+        .row {
+          @include adaptiv-font(25, 12);
+        }
+      }
+      .buy {
+        margin-left: 0;
+        width: auto;
+        align-items: flex-start;
+        height: auto;
+        margin-top: 10px;
+        .text {
+          align-items: flex-start;
+          .code {
+            text-align: left;
+          }
+        }
+        .buttons {
+          align-self: flex-end;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 30px;
+          margin-top: 10px;
+          .get {
+            margin: 0;
+          }
+          .get button {
+            width: 70px;
+            height: 30px;
+            @include adaptiv-font(20, 10);
+          }
+          .get img {
+            width: 30px;
+          }
+          .like {
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+      .literal-rub,
+      .literal-kop {
+        margin-bottom: -2px;
+      }
+      .buy .text .code {
+        margin-bottom: 5px;
+      }
+      .short-line {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 100%;
+      }
+      &-image {
+        width: 200px;
+        height: 200px;
+      }
+      .buy .text {
+        .info,
+        .code {
+          @include adaptiv-font(25, 15);
+        }
+        .price {
+          .literal-rub {
+            @include adaptiv-font(50, 20);
+          }
+          .literal-kop {
+            @include adaptiv-font(35, 15);
+          }
+          .before-price,
+          .minus-price {
+            @include adaptiv-font(28, 16);
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .choose .sel label {
+      margin-right: -4vw;
+      padding: 0;
+      border-radius: 2px;
+    }
+    .choose .sel .price div input[type="text"] {
+      height: 20px;
+      font-size: 10px;
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
+  }
+}

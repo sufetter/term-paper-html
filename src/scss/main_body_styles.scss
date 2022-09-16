@@ -1,0 +1,722 @@
+body {
+  user-select: none;
+  a:active,
+  a:hover,
+  a:visited,
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+$ots: 7%;
+%header {
+  padding-bottom: 30px;
+  margin-left: $ots;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: 0.01em;
+}
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (max-width: 1000px) {
+    font-size: calc(
+      #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+    );
+  }
+  @media (min-width: 1000px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+.main-body {
+  overflow: hidden;
+  padding-top: 102px;
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .slogan {
+    margin-top: 40px;
+    margin-left: $ots;
+    margin-right: $ots;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    span {
+      color: #23b132;
+    }
+    .little {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+    img {
+      width: 700px;
+    }
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      color: white;
+      width: 180px;
+      height: 40px;
+      background: #23b132;
+      border-radius: 32.8467px;
+      padding: 10px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      margin-top: 135px;
+      img {
+        width: 20px;
+        filter: invert(1);
+      }
+    }
+  }
+  .pop-categories {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: $ots;
+    margin-right: $ots;
+    h1 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    .pop-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pop {
+      background: #e7e6e6;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      &:hover {
+        cursor: pointer;
+      }
+      margin: 2px;
+      border-radius: 5px;
+      height: 150px;
+      width: 18%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      min-width: 150px;
+      img {
+        // margin-top: 10px;
+        width: 120px;
+        height: 110px;
+      }
+      p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 600;
+        @include adaptiv-font(20, 10);
+        line-height: 25px;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+  .main-good {
+    background: #ffffff;
+    border-radius: 15px;
+    border: 3px solid rgba(35, 31, 32, 0.11);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 320px;
+    padding: 12px;
+    &:hover {
+      cursor: pointer;
+    }
+    *:hover {
+      cursor: pointer;
+    }
+    .name {
+      font-family: "Oswald";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: 0.01em;
+      margin-top: 10px;
+    }
+    .sale {
+      position: relative;
+      background: #23b132;
+      border-radius: 5px;
+      width: 34px;
+      height: 17px;
+      color: white;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
+      font-size: 11px;
+      line-height: 17px;
+      letter-spacing: 0.01em;
+      z-index: 10;
+    }
+    img {
+      position: relative;
+      margin-top: -20px;
+      width: 180px;
+      height: 180px;
+      z-index: 1;
+    }
+    .mark {
+      display: flex;
+      align-items: center;
+      color: rgba(255, 193, 7, 1);
+      font-family: "Encode Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      letter-spacing: 0.01em;
+      img {
+        width: 13px;
+        height: auto;
+        margin-right: 2px;
+        margin-top: 0;
+      }
+    }
+    .price {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .main-price {
+        display: flex;
+        align-items: center;
+        .literal-rub {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 15px;
+        }
+        .literal-cop {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 12px;
+        }
+      }
+      .before-price {
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        color: #8f8f8f;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        text-decoration: line-through;
+      }
+      .minus-price {
+        font-family: "Montserrat";
+        margin-left: 5px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        color: #23b132;
+        margin-right: -5px;
+      }
+    }
+    .good-buttons {
+      display: flex;
+      align-items: center;
+      button {
+        width: 170px;
+        height: 30px;
+        background: #23b132;
+        border-radius: 7px;
+        font-family: "Outfit";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+      div {
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        border-radius: 5px;
+        border: rgba(35, 177, 50, 1) solid 1px;
+      }
+      .click {
+        margin: 0;
+        width: 20px;
+        height: auto;
+      }
+    }
+    .good-info {
+      display: flex;
+      position: relative;
+      z-index: 10;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: -10px;
+      p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.01em;
+      }
+    }
+  }
+  .all-hits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: $ots;
+    width: 100% - (2 * $ots);
+  }
+  .good__string-new {
+    display: none;
+    height: 5px;
+    width: 100%;
+  }
+
+  .novelties {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: $ots;
+    margin-right: $ots;
+    .stringNovel {
+      @extend %header;
+      font-size: 32px;
+      margin: 0;
+    }
+    .offers {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-start;
+      .slide-left {
+        position: relative;
+        left: 4.7%;
+        width: 26px;
+      }
+      .first-offer {
+        width: 50%;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+      .second-offer {
+        width: 530px;
+        // margin-left: 20px;
+      }
+      .slide-right {
+        position: relative;
+        left: -6.5%;
+        width: 26px;
+        transform: rotate(180deg);
+      }
+      .best {
+        margin: 0 0 0 18%;
+        width: 15%;
+        // display: none;
+      }
+    }
+    .nov {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+  }
+  .other {
+    background: rgba(35, 31, 32, 0.11);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px $ots 30px $ots;
+    p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      letter-spacing: 0.01em;
+      margin-bottom: 30px;
+    }
+    div {
+      margin: 0 5px 0 5px;
+      width: 100%;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      *:hover {
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1300px) {
+    .main-good {
+      width: 16%;
+      border: 1px solid rgba(35, 31, 32, 0.11);
+      .name {
+        @include adaptiv-font(20, 8);
+      }
+      img {
+        width: 100%;
+        height: 144.29px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .slogan {
+      .main-image {
+        width: 60%;
+        margin-top: 0px;
+      }
+      button {
+        margin-top: 50px;
+      }
+    }
+    .main-good {
+      height: 290px;
+    }
+  }
+  @media (max-width: 1100px) {
+    .pop-categories {
+      .pop {
+        width: 120px;
+        min-width: 120px;
+        height: 110px;
+        img {
+          width: 80px;
+          margin-top: 0;
+        }
+        p {
+          margin-top: 0px;
+        }
+      }
+    }
+    .main-good .price {
+      .main-price {
+        .literal-rub {
+          @include adaptiv-font(19, 6);
+        }
+        .literal-cop {
+          @include adaptiv-font(15, 4);
+        }
+      }
+      .before-price {
+        @include adaptiv-font(16, 5);
+      }
+      .minus-price {
+        @include adaptiv-font(19, 2);
+      }
+    }
+  }
+  .hits {
+    background: rgba(35, 31, 32, 0.11);
+    padding-top: 10px;
+    padding-bottom: 25px;
+    #href {
+      margin-top: -102px;
+      margin-bottom: 102px;
+    }
+    .string-hits {
+      @extend %header;
+      @include adaptiv-font(25, 14);
+      img {
+        margin: 3px;
+        width: 30px;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .novelties .stringNovel {
+      @include adaptiv-font(35, 23);
+    }
+    .other {
+      p {
+        @include adaptiv-font(35, 23);
+      }
+    }
+    .slogan {
+      .main-image {
+        display: none;
+      }
+    }
+    .main-good {
+      padding: 6px;
+      height: 250px;
+      .name {
+        margin-top: 2px;
+      }
+      img {
+        max-height: 100px;
+      }
+      .good-info {
+        img {
+          width: 10px;
+        }
+        p {
+          @include adaptiv-font(14, 6);
+        }
+      }
+      .price {
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+      .good-buttons {
+        button {
+          @include adaptiv-font(15, 5);
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .slogan {
+      div {
+        p {
+          @include adaptiv-font(70, 30);
+        }
+        .little {
+          @include adaptiv-font(30, 16);
+        }
+        button {
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+      .main-image {
+        display: none;
+      }
+    }
+    .other {
+      flex-wrap: wrap;
+    }
+    .main-good {
+      height: 220px;
+    }
+    .main-good .good-buttons {
+      button {
+        height: 20px;
+      }
+      div {
+        height: 20px;
+        width: 20px;
+        padding: 1px;
+        .click {
+          width: 18px;
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .hits .string-hits {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+    .other {
+      padding: 5px 2% 5px 2%;
+      p {
+        margin-bottom: 5px;
+      }
+    }
+    .novelties {
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      .nov {
+        margin-top: 5px;
+      }
+      .stringNovel {
+        padding-bottom: 5px;
+      }
+    }
+    .main-good {
+      height: 200px;
+    }
+    .main-good .sale {
+      width: 25px;
+      height: 15px;
+      font-size: 9px;
+    }
+    .all-hits {
+      margin-left: 2%;
+      margin-right: 2%;
+      width: 96%;
+    }
+    .slogan {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+    .pop-categories {
+      margin-left: 2%;
+      margin-right: 2%;
+      h1 {
+        @include adaptiv-font(50, 20);
+      }
+      .pop {
+        height: 80px;
+        width: 100px;
+        min-width: 100px;
+        min-width: auto;
+        img {
+          width: 60px;
+        }
+        p {
+          line-height: 16px;
+        }
+      }
+    }
+    .hits {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      .string-hits {
+        padding-top: 0;
+        padding-bottom: 5px;
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .nov {
+      flex-wrap: wrap;
+      margin-right: 0;
+    }
+    .novelties {
+      .offers {
+        .first-offer {
+          width: 80%;
+        }
+        .best {
+          margin: 0;
+          width: 20%;
+        }
+      }
+    }
+    .good__string-new {
+      display: block;
+    }
+    .main-good {
+      width: 33%;
+      height: 290px;
+      .good-buttons {
+        button {
+          @include adaptiv-font(25, 8);
+        }
+      }
+      img {
+        max-height: 190px;
+      }
+      .name {
+        @include adaptiv-font(28, 10);
+      }
+      .good-info {
+        img {
+          width: 12px;
+        }
+        p {
+          @include adaptiv-font(20, 8);
+        }
+      }
+      .price {
+        .main-price {
+          .literal-rub {
+            @include adaptiv-font(30, 10);
+          }
+          .literal-cop {
+            @include adaptiv-font(25, 7);
+          }
+        }
+        .before-price {
+          @include adaptiv-font(26, 8);
+        }
+        .minus-price {
+          @include adaptiv-font(25, 9);
+          margin-right: -5px;
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .main-good {
+      height: 230px;
+    }
+  }
+  @media (max-width: 400px) {
+    .slogan {
+      margin-top: 5px;
+      div {
+        button {
+          margin-top: 5px;
+          width: 120px;
+          height: 30px;
+          p {
+            font-size: 12px;
+          }
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+    .novelties {
+      .offers {
+        .first-offer {
+          width: 100%;
+        }
+        .best {
+          display: none;
+        }
+      }
+    }
+    .pop-categories {
+      .pop {
+        height: 70px;
+        img {
+          width: 50px;
+        }
+      }
+      .pop:last-child {
+        display: none;
+      }
+    }
+  }
+}
